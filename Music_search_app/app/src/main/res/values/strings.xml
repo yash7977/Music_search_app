@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Groups1_17_IC07</string>
+    <string name="Limit">Limit:</string>
+    <string name="SortBy">Sort By</string>
+    <string name="TrackRating">Track Rating</string>
+    <string name="ArtistRating">Artist Rating</string>
+    <string name="SreachResult">Search Results</string>
+    <string name="Search">Search</string>
+    <string name="Track">"Track: "</string>
+    <string name="Artist">"Artist: "</string>
+    <string name="Album">Album:</string>
+    <string name="Date">Date</string>
+</resources>

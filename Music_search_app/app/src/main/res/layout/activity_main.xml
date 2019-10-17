@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="222dp"
+        android:layout_height="192dp"
+        app:layout_constraintBottom_toBottomOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/listView"
+        app:layout_constraintTop_toTopOf="@+id/listView" />
+
+    <EditText
+        android:id="@+id/SongName"
+        android:layout_width="356dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Limit"
+        android:layout_width="65dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/Limit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SongName" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="268dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/Limit"
+        app:layout_constraintTop_toBottomOf="@+id/SongName" />
+
+    <TextView
+        android:id="@+id/SortBy"
+        android:layout_width="64dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/SortBy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Limit" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="135dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/SortBy"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar"
+        android:checkedButton="@id/SortTrackRating">
+
+        <RadioButton
+            android:id="@+id/SortTrackRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/TrackRating" />
+
+        <RadioButton
+            android:id="@+id/SongArtistRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ArtistRating" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/SearchResultText"
+        android:layout_width="136dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="84dp"
+        android:text="@string/SreachResult"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="411dp"
+        android:layout_height="345dp"
+        android:layout_marginTop="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SearchResultText" >
+
+    </ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
