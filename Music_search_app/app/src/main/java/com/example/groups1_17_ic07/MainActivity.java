@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     sort = "s_track_rating";
                     progressBar.setVisibility(View.VISIBLE);
                     try {
-                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=a1a8aab86ef317f76e8aeefa50eb5174&q="+SongName.getText()+"&page_size="+seekBar.getProgress()+"&"+sort+"=desc");
+                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=<API KEY>"+"&q="+SongName.getText()+"&page_size="+seekBar.getProgress()+"&"+sort+"=desc");
                         new getMusic().execute(url);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
 
                     try {
-                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=a1a8aab86ef317f76e8aeefa50eb5174&q="+SongName.getText()+"&page_size="+seekBar.getProgress()+"&"+sort+"=desc");
+                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=<API KEY>"+"&q="+SongName.getText()+"&page_size="+seekBar.getProgress()+"&"+sort+"=desc");
                         new getMusic().execute(url);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     progressBar.setVisibility(View.VISIBLE);
                     try {
-                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=a1a8aab86ef317f76e8aeefa50eb5174&q=" + SongName.getText().toString() + "&page_size=" + seekBar.getProgress() + "&" + sort + "=desc");
+                        URL url = new URL("http://api.musixmatch.com/ws/1.1/track.search?apikey=<API KEY>"+"&q=" + SongName.getText().toString() + "&page_size=" + seekBar.getProgress() + "&" + sort + "=desc");
                         new getMusic().execute(url);
                     } catch (MalformedURLException e) {
                         e.printStackTrace();
